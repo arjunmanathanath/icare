@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>icare</title>
+<link href="{% static 'userauth/login.css' %}" rel="stylesheet" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>i-Care</title>
+
+</head>
+
+
+<body>
+<div class="container">
+
+<div class="login">
+    <h1>Login</h1>
+
+<form action="/sign/in" method="post">
+    {% csrf_token %}
+    {{form.non_field_errors}}
+    {% if erro_msg %}
+    <p>{{erro_msg}}</p>
+    {% endif %}
+    <div class="fieldWrapper">
+        {{form.username.errors}}
+        <!--<label for="{{form.username.id_email}}"></label>-->
+        {{form.username}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.password.errors}}
+        <!--<label for="{{form.password.id_password}}"></label>-->
+        {{form.password}}
+    </div>
+
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+
+</form>
+<br/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- login bootsnipp -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9155049400353686"
+     data-ad-slot="9589048256"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</body>
+</html>

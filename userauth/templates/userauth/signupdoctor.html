@@ -1,0 +1,138 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>i-care</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link href="{% static 'userauth/bootstrap.min.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'userauth/style.css' %}">
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+        <link href="{% static 'userauth/reg.css' %}" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600i" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+    <style>
+       .container-fluid
+       {
+        width:100%;
+        border-radius: 60px;
+       }
+        body
+        {
+          color: rgba(6, 6, 6, 1);
+          color: #FFF;
+          font-size: 17px;
+        }
+        .form-control{
+          width:80%;
+          border-radius:60px;
+
+        }
+        .bck
+        {
+         /*background-color:#fff;*/
+
+        }
+        .color
+        {color: #060606;}
+        .btn-success:focus {
+    color: #060606;;
+    background-color: #449D44;
+    border-color: #255625;
+}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="bck">
+        <h1 style=" font-family: 'Open Sans', sans-serif;color: rgba(6, 33, 99, 1); "><b>i-care</b></h1></div>
+</div>
+<div class="container">
+
+<form action="{%url 'userauth:signup' status%}" method="post">
+    {% csrf_token %}
+    {{form.non_field_errors}}
+    {% if erro_msg %}
+    <p>{{erro_msg}}</p>
+    {% endif %}
+     <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.name.errors}}
+        <label for="{{form.name.id_name}}">Name </label>
+        {{form.name}}
+         </div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.username.errors}}
+        <label for="{{form.username.id_name}}">Username </label>
+        {{form.username}}
+         </div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form1.reg_no.errors}}
+        <label for="{{form.reg_no.id_reg_no}}">Register number</label>
+        <div class="color">
+        {{form1.reg_no}}
+        </div></div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form1.qualification.errors}}
+        <label for="{{form1.qualification.id_qualification}}">Qualification </label>
+        {{form1.qualification}}
+         </div>
+    </div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.mobile.errors}}
+        <label for="{{form.mobile.id_mobile}}">Mobile Phone </label>
+        <div class="color">
+        {{form.mobile}}
+        </div></div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.email.errors}}
+        <label for="{{form.email.id_email}}">Email ID </label>
+        {{form.email}}
+         </div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+
+        {{form.birth_date.errors}}
+        <label for="{{form.birth_date.id_email}}">Year of graduation</label>
+             <div class="color">
+        {{form.birth_date}}
+             </div></div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.password.errors}}
+        <label for="{{form.password.id_password}}">Create a Password </label>
+        {{form.password}}
+         </div></div>
+    {% if pass_match %}
+    <p>{{pass_match}}</p>
+    {% endif %}
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.cpassword.errors}}
+        <label for="{{form.cpasswordl.id_cpassword}}">Confirm your Password </label>
+        {{form.cpassword}}
+         </div></div>
+    <div class="fieldWrapper">
+         <div class="form-group">
+        {{form.country.errors}}
+        <label for="{{form.country.id_country}}">Location </label>
+        {{form.country}}
+         </div>
+    </div>
+
+
+
+  <input type="submit" value="Submit" class="btn btn-success"/>
+
+</form>
+</div>
+</body>
+</html>

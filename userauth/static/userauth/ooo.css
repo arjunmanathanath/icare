@@ -1,0 +1,426 @@
+
+
+td, body, input, select, textarea, p {
+       
+        font-family: Arial, Helvetica, sans-serif;
+     
+}
+
+a {
+        text-decoration:none;
+        color: #207CC1;
+}
+
+
+#banner {
+        border-bottom: 1px solid #dddddd;
+}
+
+#content {
+        padding:1em;
+}
+
+
+
+
+
+
+.container
+{
+height:100%;
+}
+
+p.m
+{
+font-family: Oswald;
+font-variant: small-caps;
+
+font-size:2.5em;
+color:#7FFF00;
+font-weight:bold;
+}
+p.t
+{
+text-align:center;
+font-style:italic;
+font-weight:bold;
+font-size:1.5em;
+color: #FF0000 ;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+}
+h7
+{
+color: #696969; 
+font-size:1.6em;
+font-weight:bold;
+text-align:center;
+}
+h4
+{
+font-size:1.5em;
+
+}
+
+.col-md-6
+{
+text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+svg {
+  height:100%;
+}
+figure {
+  display: inline-block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 40px;
+  -webkit-margin-end: 40px;
+}
+input { -webkit-appearance: none; -webkit-border-radius:0; border-radius:0; }
+body {
+  min-width: 992px;
+}
+/*  =============================
+    header */
+
+header {
+  display:block;
+}
+.branding-bar { 
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  z-index: 500;
+  box-shadow: 0 0 5px rgba(115,115,115,.8),0 2px 6px rgba(115,115,115,.7);width: 100%; 
+  background-color: #b9002d; 
+  display:inline-block; 
+  box-shadow: 0 0 5px rgba(115,115,115,.8),0 2px 6px rgba(115,115,115,.7); 
+}
+.branding-bar .logo { 
+  width:129px; 
+  height:23px; 
+  margin: 11px 50px 11px 10px;
+  background: url("//cdn.oreillystatic.com/images/sitewide-headers/oreilly-logo-reversed-130x23.png");
+  background: none,url("//cdn.oreillystatic.com/images/sitewide-headers/oreilly-logo-norm.svg");
+  display:inline-block;
+  background-size: cover;
+}
+.branding-bar ul { 
+  font-family:'oreilly-urw-typewriter-narro', Courier New; 
+  display:inline-block; 
+  vertical-align: top; 
+  white-space: nowrap;
+}
+
+.branding-bar ul.top-nav
+{
+font-size:2.4em;
+}
+.branding-bar li {
+  display:inline-block; 
+  height: 2.75rem;
+  line-height: 2.75rem;
+  position: relative; 
+  margin-right: 40px;
+}
+.branding-bar ul li a { 
+  text-shadow: 0 1px 2px #999; 
+  font-size: 1.375 rem;
+  color: #fff;
+  pointer-events: all;
+}
+.branding-bar a { 
+  color:#fff;
+}
+.branding-bar ul a:before, .branding-bar a:after {
+  -webkit-transition: width .25s cubic-bezier(.86,0,.07,1); 
+  -ms-transition: width .25s cubic-bezier(.86,0,.07,1); 
+  transition: width .25s cubic-bezier(.86,0,.07,1); content: ""; 
+  z-index: -1; position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  height: 4px; 
+  width: 0; 
+}
+.branding-bar ul a:after {
+  background-color: #e6e6e6; 
+  z-index: 500; 
+}
+.no-touch .branding-bar ul a:hover:after {
+  width: 100%;
+}
+.right {
+  position:absolute;
+  right:.525rem;
+  top:0.2rem;
+  z-index:500;
+  line-height:1
+}
+
+.icon-search svg {
+  height: 1.5rem;
+  width: 100%;
+  top: .5rem;
+}
+.hide {
+  display: none!important;
+  visibility: hidden!important;
+}
+.mobile-nav .search-nav {
+  display:none;
+}
+.branding-bar #user {
+  position: relative;
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  width: 7.6rem;
+  opacity: 1;
+  -webkit-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+.branding-bar #user a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  opacity: 0.6;
+}
+.branding-bar #user a:hover {
+  color: #fff;
+  opacity: 1;
+}
+header #user #log-out,header #user #preferences {
+  display:none
+}
+header #user #log-out, header #user #log-in, header #user #preferences {
+  display:inline-block;
+}
+#menu-toggle, #menu-toggle label, #menu, #close {
+  display:none;
+}
+.topics {
+  height: 40px;
+  position: relative;
+  z-index: 300;
+  overflow: hidden;  
+  padding: .5rem 0 .375rem;
+  background: #f5f5f5;
+  box-shadow: 0 0 4px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.05);
+}
+.topics:after { 
+  content: "";
+  position: absolute;
+  z-index: 400;
+  top: 0;
+  right: 0;
+  width: 5.75em;
+  height: 100%;
+  background-image: -webkit-linear-gradient(left,rgba(245,245,245,0) 0,#f5f5f5 10%);
+  background-image: linear-gradient(to right,rgba(245,245,245,0) 0,#f5f5f5 10%);
+}
+.topics h3, .sa {
+  font-family: 'guardian-text-oreilly', Arial, Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: .8125rem;
+  letter-spacing: .05em;
+  float: left;
+  padding-left: .625rem;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #404040;
+}
+.topics h3 {
+  margin: .275rem 0 0;
+  width: 11.7125rem;
+}
+.topics-list {
+  white-space: nowrap;
+}
+.topics-list li {
+  display:inline-block; 
+  background: #fff;
+  margin-bottom: 10px;
+  margin-right: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+.topics-list li a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  font: 100%/1.4 'guardian-text-oreilly',open-sans,Helvetica,Arial,sans-serif;
+  font-size: 1 rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .2875rem .5rem .4rem 1.125rem;
+  display: block;
+}
+.scrollable {
+  overflow: auto;
+  padding-bottom: 40px;
+  margin-bottom: -40px;
+  vertical-align: baseline;
+}
+.sa {
+  position: absolute;
+  z-index: 500;
+  right: .3125rem;
+  top: .5rem;
+  padding: .3125rem .5rem .5rem;
+}
+.sa:hover {
+  color: #fff;
+  background: #b9002d;
+}
+.st-bg--before:before { background: #d3002d; } 
+.pro-bg--before:before { background: #008739; } 
+.sha-bg--before:before { background: #d3002d; } 
+.qa-bg--before:before { background: #7473a9; }
+
+.flag {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  font-size: 1 rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 400;    
+}
+.flag a {
+  position:relative;
+  z-index:5;
+  -webkit-transition: color .25s cubic-bezier(.86,0,.07,1);
+  -ms-transition: color .25s cubic-bezier(.86,0,.07,1);
+  transition: color .25s cubic-bezier(.86,0,.07,1);
+}
+.flag:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: .5625rem;
+  z-index: 0;
+  -webkit-transition: width .25s cubic-bezier(.86,0,.07,1);
+  -ms-transition: width .25s cubic-bezier(.86,0,.07,1);
+  transition: width .25s cubic-bezier(.86,0,.07,1);
+}
+.flag:hover:before {
+  width: 102%;
+}
+.flag:hover a {
+  color: #fff;
+}
+header #menu-toggle, header #mobile-menu .mobile-nav {
+  display: none;
+}
+
+/*  =============================
+    Search box */
+
+
+/*  =============================
+    Body */
+
+#page * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.orm.ml {
+  margin-left: 0;
+  padding-left: 8px;
+}
+.mainLayoutTable {
+  border: none;
+  margin-bottom: 0;
+}
+#page {
+  margin-bottom: 0;
+} 
+li.GlobalNavInfo.right { 
+  width: 145px; 
+}
+.orm .tabbed-content .body li { /*carousel*/
+  width: 720px;
+}
+
+/*  =============================
+    Footer */
+footer
+{
+position:absolute;
+right:0;
+bottom:0;
+left:0;
+padding:1 rem;
+background-color:#2f3239;
+text-align:center;
+color:#fff;
+
+}
+footer a{
+color:#ff7361;
+}
+footer a:hover
+{
+color:#fff;
+}
+
+
+
+
+
+
+.radar .pa-text { color: #b9002d;}
+.st .pa-text { color: #d3002d; } 
+.pro .pa-text { color: #008739; } 
+.sha .pa-text { color: #d3002d; } 
+.qa .pa-text { color: #7473a9; }
+.hardware-innovation .pa-text { color: #51729c; }
+.operations .pa-text { color: #008a96; }
+.security .pa-text { color: #001689; }
+.software-engineering .pa-text { color: #510c76; }
+.web-programming .pa-text { color: #00b7b7; }
+.economy .pa-text { color: #570e51; }
+.radar .pa-bg { background-color: #b9002d;}
+.ai .pa-bg { background-color: #d3002d; } 
+.business .pa-bg { background-color: #008739; } 
+.data .pa-bg { background-color: #d3002d; } 
+.design .pa-bg { background-color: #7473a9; }
+.hardware-innovation .pa-bg { background-color: #51729c; }
+.operations .pa-bg { background-color: #008a96; }
+.software-engineering .pa-bg { background-color: #510c76; }
+.web-programming .pa-bg { background-color: #00b7b7; }
+.economy .pa-bg { background-color: #570e51; }
+.security .pa-bg { background-color: #001689; }

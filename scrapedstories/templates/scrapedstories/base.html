@@ -1,0 +1,75 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+    <title>i-Care!</title>
+     <link rel="stylesheet" href="{%static 'query/ooo.css' %}" type="text/css">
+     <link href="{% static 'query/bootstrap.min.css' %}" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="{%static 'query/search.css'%}">
+    {% block style%}
+    {% endblock %}
+</head>
+<body>
+<header>
+
+<div class="branding-bar pa-bg">
+<img alt="i-Care Preview" src="{%static 'query/images/med.jpg'%}" class="img-circle" width="60" height="60">
+
+        <ul class="top-nav">
+          <li><a href="#"><b>i-Care</a></li>
+
+        </ul></div>
+<div id="mobile-menu">
+       <div class="topics" >
+        <div class="scrollable">
+
+
+          <ul class="topics-list">
+            <li  class="active" >
+              <a href="{%url 'scrapedstories:mystory'%}" >Stories</a>
+            </li>
+            <li class="flag pro-bg--before">
+              <a href="{%url 'userauth:profile'%}" >Profile</a>
+            </li>
+            <li class="flag sha-bg--before">
+              <a href="{%url 'share:share'%}" >Share</a>
+            </li>
+            <li class="flag qa-bg--before">
+              <a href="{%url 'query:queryhome'%}" >Askit</a>
+            </li>
+
+          </ul>
+
+        </div><!-- div.scrollable -->
+        <a href="{% url 'userauth:logout'%}" class="sa">Logout</a>
+      </div><!-- div.topics -->
+
+    </div><!-- div.mobile-menu -->
+
+
+
+</header>
+
+{% block body %}
+{% endblock %}
+
+<!--<footer>
+<div class="container">
+
+<div class="copyright f-left">
+Copyright 2016|
+<a href="#"> By i-Care|</a>
+<a href="#">Privacy</a>
+-->
+</div>
+</div>
+</footer>
+
+</body>
+</html>

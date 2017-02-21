@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>i-care</title>
+</head>
+<body>
+
+<form action="/sign/in" method="post">
+    {% csrf_token %}
+    {{form.non_field_errors}}
+    {% if erro_msg %}
+    <p>{{erro_msg}}</p>
+    {% endif %}
+    <div class="fieldWrapper">
+        {{form.username.errors}}
+        <label for="{{form.username.id_email}}">User Name:</label>
+        {{form.username}}
+    </div>
+    <div class="fieldWrapper">
+        {{form.password.errors}}
+        <label for="{{form.password.id_password}}">Password:</label>
+        {{form.password}}
+    </div>
+
+
+  <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

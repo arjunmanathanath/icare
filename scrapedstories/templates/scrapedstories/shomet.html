@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="source" content="Websites">
+  <title>StoryBoard</title>
+</head>
+
+<body>
+<h1><ins>My Feeds</ins></h1>
+<h4>Have a nice day...</h4>
+<hr>
+<br>
+{%if data%}
+ {%for feeds in data%}
+ <h3>{{feeds.title}}</h3><br>
+ <img src="{{feeds.simage}}" alt="image!!!"><br>
+ <pre>{{feeds.snippet}}</pre><br>
+ <a href={{feeds.slink}}>Click to read full article</a><br>
+ <hr>
+ <br>
+ {% endfor %}
+{% else %}
+  <h4>Items not found</h4>
+{% endif %}
+ 
+</body>
+
+</html>

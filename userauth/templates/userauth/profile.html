@@ -1,0 +1,157 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+  
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+    <title>i-Care!</title>
+ <link rel="stylesheet" href="{% static 'userauth/ooo.css'%}" type="text/css">
+ <link href="{%static 'userauth/bootstrap.min.css'%}" rel="stylesheet">
+ 
+<style>
+
+
+ 
+html
+{
+height:100%;
+box-sizing:border-box;
+}
+body{
+        background-image: url("vv.jpg ");
+    margin:3;
+
+postion:absolute;
+
+min-height:90%;
+  } 
+
+</style>
+
+</head>
+
+<body>
+<header>
+
+<div class="branding-bar pa-bg">
+<img alt="Bootstrap Image Preview" src="{%static 'query/images/med.jpg'%}" class="img-circle" width="60" height="60">
+
+        <ul class="top-nav">
+            <li><a href="#"><b>i-Care</b></a></li>
+             
+        </ul></div>
+<div id="mobile-menu">
+       <div class="topics" >
+        <div class="scrollable">
+
+
+ <ul class="topics-list">
+            <li  class="active" >
+              <a href="{%url 'scrapedstories:mystory'%}" >Stories</a>
+            </li>
+            <li class="flag pro-bg--before">
+              <a href="{%url 'userauth:profile'%}" >Profile</a>
+            </li>
+            <li class="flag sha-bg--before">
+              <a href="{%url 'share:share'%}" >Share</a>
+            </li>
+            <li class="flag qa-bg--before">
+              <a href="{%url 'query:queryhome'%}" >Askit</a>
+            </li>
+
+          </ul>
+
+        </div><!-- div.scrollable -->
+        <a href="{%url 'userauth:logout'%}" class="sa">Logout</a>
+      </div><!-- div.topics -->
+
+    </div><!-- div.mobile-menu -->
+
+
+</header>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+
+                  <div class="row">
+
+                                           <div class="col-md-6">
+							
+<br><br><img alt="Bootstrap Image Preview" src="C:\Users\shanz\Desktop\article-image\rrr.jpg" class="img-rounded" width="160" height="160">
+ 
+							<address>
+								 <strong><br><br>Name:{{user.username}}<br> <br>Address:qq house,zcv p.o	,tt city.					</address>
+						</div>
+
+						    <div class="col-md-6">
+							<dl>
+								<dt>
+									<b>             About:
+								</dt>
+								<dd>
+									<br><br>Qualification:
+								</dd>
+								<dt>
+									<br><br>Professional Experience:
+								</dt>
+								<dd>
+									<br><br>Location:{{user.country}}
+								</dd>
+															</dl>
+                                              <br> <br> <a href="aa.html"> Complete Your Profile for effeciency</a>
+						                 </div>
+                                                </div>
+					</div>
+
+				 </div>
+			
+	
+<br><br>
+<div class="row">
+<div class="col-md-3"> </div>
+<div class="col-md-6">
+
+							
+<table class="table table-striped table-bordered"
+ align="center" border="1">
+<tr>
+<td align:center><a href="#" class="btn btn-primary">FOLLOWERS</a></td>
+<td><a href="#" class="btn btn-primary">FOLLOWING</a></td>
+</tr></table>
+
+</div>
+<div class="col-md-3"> </div>
+
+
+</div>
+</div>
+
+
+<footer>
+<div class="container">
+
+<div class="copyright f-left">
+Copyright 2016|
+<a href="#"> By i-Care|</a>
+<a href="#">Privacy</a>
+
+</div>
+</div>
+</footer>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
+
+

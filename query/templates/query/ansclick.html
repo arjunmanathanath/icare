@@ -1,0 +1,144 @@
+ {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>i-Care!</title>
+
+
+
+    <link href="{% static 'query/bootstrap.min.css'%}" rel="stylesheet">
+
+
+    <link href="{% static 'query/navbars.css'%}" rel="stylesheet">
+<style>
+html
+{
+height:100%;
+box-sizing:border-box;
+}
+body{
+        background-image: url("ee.jpg ");
+    margin: 0;
+
+postion:relative;
+
+min-height:100%;
+  }
+
+</style>
+
+
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+<div class="row">
+		<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+
+<table class="table table-striped table-bordered"
+ align="center" border="1">
+
+
+<tr>
+
+<td>
+<p>Vote here!!</p>
+      <form action="{%url 'query:upvote' solution.id %}" method="post">
+      {% csrf_token %}
+        <button type="submit" class="btn btn-success">Upvote</button>
+  </form>
+<br>
+   <h2> {{solution.vote}} </h2>
+
+
+    <br>
+
+      <form action="{%url 'query:downvote' solution.id %}" method="post">
+      {% csrf_token %}
+        <button type="submit" class="btn btn-success">Downvote</button>
+  </form>
+
+</td>
+
+<td>{{solution.soln_text}}</td>
+
+</tr> <tr> <h5><span class="glyphicon glyphicon-time"></span> Post by {{solution.user_posted.username}}, {{solution.written}}.</h5> </tr>
+</table>
+</div>
+<div class="col-md-2"></div>
+</div>
+
+
+<!--<div class="row">
+		<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+
+<table class="table table-striped table-bordered"
+ align="center" border="1">
+<tr>
+
+<td>
+<p>Vote here!!</p>
+
+<a href="#" class="btn btn-success">UpVote</a>
+<br><br>
+
+<a href="#" class="btn btn-success">DownVote</a>
+
+</td>
+
+
+<td> Answer</td>
+</tr>
+<tr> <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> </tr>
+</table>
+</div>
+<div class="col-md-2"></div>
+</div>
+
+<div class="row">
+		<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+
+<table class="table table-striped table-bordered"
+ align="center" border="1">
+<tr>
+
+<td>
+<p>Vote here!!</p>
+
+<a href="#" class="btn btn-success">UpVote</a>
+<br><br>
+
+<a href="#" class="btn btn-success">DownVote</a>
+
+</td>
+
+
+<td> Answer</td>
+</tr>
+
+<tr> <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> </tr>
+</table>
+</div>
+<div class="col-md-2"></div>
+</div>-->
+
+</div>
+
+
+</body>
+</html>

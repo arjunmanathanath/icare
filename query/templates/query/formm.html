@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>i-Care</title><link href="{% static 'query/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'query/ooo.css' %}" type="text/css">
+
+<link href="{% static 'query/bootstrap.min.css'%}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'query/search.css'%}">
+     <link href="{% static 'query/navbars.css'%}" rel="stylesheet">
+</head>
+
+<body>
+<header>
+
+<div class="branding-bar pa-bg">
+<img alt="i-Care Preview" src="{%static 'query/images/med.jpg'%}" class="img-circle" width="60" height="60">
+
+        <ul class="top-nav">
+          <li><a href="#"><b>i-Care</a></li>
+
+        </ul></div>
+<div id="mobile-menu">
+       <div class="topics" >
+        <div class="scrollable">
+
+
+          <ul class="topics-list">
+            <li  class="active" >
+              <a href="{%url 'scrapedstories:mystory'%}" >Stories</a>
+            </li>
+            <li class="flag pro-bg--before">
+              <a href="{%url 'userauth:profile'%}" >Profile</a>
+            </li>
+            <li class="flag sha-bg--before">
+              <a href="{%url 'share:share'%}" >Share</a>
+            </li>
+            <li class="flag qa-bg--before">
+              <a href="{%url 'query:queryhome'%}" >Askit</a>
+            </li>
+
+          </ul>
+
+        </div><!-- div.scrollable -->
+        <a href="{% url 'userauth:logout'%}" class="sa">Logout</a>
+      </div><!-- div.topics -->
+
+    </div><!-- div.mobile-menu -->
+
+
+
+</header>
+<div class="col-md-8">
+  <form action="{% url 'query:postquery'%}" method="post">
+      {% csrf_token %}
+    <!--<div class="form-group">-->
+      <!--<br><label for="question"> <b>Type your question here::  </b></label>-->
+      <br/>
+      <div class="fieldWrapper">
+        {{form.query_text.errors}}
+        <!--<label for="{{form.query_text.id_query_text}}">User Name:</label>-->
+      <br><label for="question"> <b>Type your question here::  </b></label>
+        {{form.query_text}}
+      <!--</div>-->
+
+    </div>
+    <!--<a href="#" class="btn btn-success"> Submit</a>-->
+    <button type="submit" class="btn btn-success">log my question.</button>
+  </form>
+</div>
+</body>
+</html>
+<!--btn btn-primary btn-block btn-large-->

@@ -1,0 +1,96 @@
+.container-fluid
+{
+height:100%;
+}
+
+.container
+{
+height:100%;
+}
+p.t
+{
+text-align:center;
+font-style:italic;
+font-weight:bold;
+font-size:1.5em;
+color: #FF0000 ;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+}
+h7
+{
+background-color: #008000;
+font-size:1.7em;
+font-weight:bold;
+text-align:center;
+}
+.navbar-default {
+background-color: #f61600 ;
+border-color: #d6d3b8;
+}
+.navbar-default .navbar-brand {
+color: #e5ece3;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+color: #303229;
+}
+.navbar-default .navbar-text {
+color: #e5ece3;
+}
+.navbar-default .navbar-nav > li > a {
+color: #e5ece3;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #303229;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: #303229;
+background-color: #d6d3b8;
+}
+
+.navbar-default .navbar-toggle {
+border-color: #d6d3b8;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #d6d3b8;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #e5ece3;
+}
+.navbar-default .navbar-collapse,.navbar-default .navbar-form {
+border-color: #e5ece3;
+}
+.navbar-default .navbar-link {
+color: #e5ece3;
+}
+.navbar-default .navbar-link:hover {
+color: #303229;
+}
+
+footer
+{
+position:absolute;
+right:0;
+bottom:0;
+left:0;
+padding:1 rem;
+background-color:#2f3239;
+text-align:center;
+color:#fff;
+
+}
+footer a{
+color:#ff7361;
+}
+footer a:hover
+{
+color:#fff;
+}
+
+.col-md-6
+{
+text-align:center;
+}
+
+
+
